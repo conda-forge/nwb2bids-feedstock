@@ -25,7 +25,7 @@ requirements:
     - python >={{ python_min }}
     - pandas
     - pynwb
-    - click
+    - rich_click
     - pydantic
     - typing-extensions
 
