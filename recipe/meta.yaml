@@ -1,5 +1,5 @@
 {% set name = "nwb2bids" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 96b866b94601d02d57565254a0781b6b32742362f7fc5725d6ba8f1e20a4f0a8
+  sha256: c8d2270a77845aa0ef72368f57fa35e44efe314c37b02bcd097f5a03220df54d
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
   entry_points:
-   - nwb2bids = nwb2bids._command_line_interface._main:_nwb2bids_cli
+    - nwb2bids = nwb2bids._command_line_interface._main:_nwb2bids_cli
 
 requirements:
   host:
@@ -25,7 +25,7 @@ requirements:
     - python >={{ python_min }}
     - pandas
     - pynwb
-    - click
+    - rich-click
     - pydantic
     - typing-extensions
 
