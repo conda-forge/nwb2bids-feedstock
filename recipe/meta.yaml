@@ -39,7 +39,7 @@ test:
   imports:
     - nwb2bids
   commands:
-    - pytest -m "not remote"
+    - pytest -m "not remote" -c pyproject.toml
 
 about:
   home: https://github.com/con/nwb2bids
