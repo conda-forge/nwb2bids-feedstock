@@ -34,14 +34,14 @@ test:
     - python {{ python_min }}
     - pytest
     - pytest-cov
-    - datalad  # TODO: remove this in future version
+    - datalad  # TODO: remove this in future release
   source_files:
     - pyproject.toml
     - tests
   imports:
     - nwb2bids
   commands:
-    - pytest -m "not remote" -c pyproject.toml
+    - pytest -m "not remote" -c pyproject.toml --ignore=tests/integration/test_remote_convert_nwb_dataset.py  # TODO: remove the ignore file in future release
 
 about:
   home: https://github.com/con/nwb2bids
