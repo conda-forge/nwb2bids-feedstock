@@ -1,5 +1,5 @@
 {% set name = "nwb2bids" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c44403ddd4e3d2b53e45232731fac3cd176972374fbef8aa6ec27d319cdff04a
+  sha256: 3a40ce75560669a848ba470c83e68092da771274b626768cfa660d7e14b67795
 
 build:
   noarch: python
