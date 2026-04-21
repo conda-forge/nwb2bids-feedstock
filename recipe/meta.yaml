@@ -29,6 +29,7 @@ requirements:
     - pydantic
     - typing-extensions
     - tqdm
+    - requests
 
 test:
   requires:
